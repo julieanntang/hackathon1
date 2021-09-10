@@ -4,7 +4,7 @@ before_action :find_item, only: [:show, :update, :destroy]
 
 
   def index
-    teams = @category.items.all
+    items = @category.items.all
     render json: items
   end
 
@@ -36,7 +36,7 @@ before_action :find_item, only: [:show, :update, :destroy]
   private
 
   def item_params
-    params.require(:item).permit(:name, :description, :price, :contact)
+    params.require(:item).permit(:name, :description, :price, :contact, :category_id)
   end
 
   def find_item

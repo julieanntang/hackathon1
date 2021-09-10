@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Category.destroy_all
+Item.destroy_all
+Article.destroy_all
+Job.destroy_all
 
 require "faker"
 
@@ -130,3 +133,11 @@ brownparaglider = submarine.items.create(name:"brown submarine", description:"th
 blackparaglider = submarine.items.create(name:"black submarine", description:"this is a blue submarine", price: 7, contact:(Faker::PhoneNumber.phone_number ))
 whiteparaglider = submarine.items.create(name:"white submarine", description:"this is a blue submarine", price: 7, contact:(Faker::PhoneNumber.phone_number ))
 goldparaglider = submarine.items.create(name:"gold submarine", description:"this is a blue submarine", price: 7, contact:(Faker::PhoneNumber.phone_number ))
+
+10.times do 
+  Job.create(name:(Faker::Job.title), description:(Faker::ChuckNorris.fact))
+end
+
+10.times do 
+  Article.create(name:(Faker::Quote.famous_last_words), author:(Faker::Name.name), description:(Faker::ChuckNorris.fact))
+end
