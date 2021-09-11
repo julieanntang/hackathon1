@@ -10,6 +10,15 @@ Category.destroy_all
 
 require "faker"
 
+(Faker::PhoneNumber.phone_number)
+
+10.times do
+    Job.create(name:(Faker::Job.title), description:(Faker::ChuckNorris.fact), salary:(Faker::Number.number(digits: 5)))
+  end
+10.times do 
+    Article.create(name:(Faker::Quote.famous_last_words), author:(Faker::Name.name), description:(Faker::ChuckNorris.fact))
+end
+
 boat = Category.create(name:"Boat", description:"this is a boat")
 rv = Category.create(name:"RV", description:"this is a rv")
 airplane = Category.create(name:"Airplane", description:"this is a airplane")
