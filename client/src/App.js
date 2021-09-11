@@ -6,6 +6,7 @@ import EditArticle from './components/EditArticle';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import SingleArticle from './components/SingleArticle';
+import About from './components/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/articles/new" component={ArticleForm} />
         <Route exact path="/articles/:id" component={SingleArticle} />
