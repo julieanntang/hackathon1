@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button, Form, Input } from 'semantic-ui-react'
 
 const CategoryNewForm = ({ addCategory }) => {
   const [name, setName] = useState('')
@@ -10,13 +11,13 @@ const CategoryNewForm = ({ addCategory }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <p>Enter Name here</p>
-        <input value={name} onChange={(e) => setName(e.target.value) }/>
+        <Input value={name} onChange={(e) => setName(e.target.value) }/>
         <p>Enter Description here</p>
-        <input value={description} onChange={(e) => setDescription(e.target.value)}/>
-        <button type="submit">Add</button>
-      </form>
+        <Input value={description} onChange={(e) => setDescription(e.target.value)}/><br/>
+        <Button type="submit">Add</Button>
+      </Form>
     </div>
   )
 }

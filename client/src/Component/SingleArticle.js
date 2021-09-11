@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import axios from "axios";
+import { Button } from "semantic-ui-react";
 
 const SingleArticle = (props) => {
   console.log(props)
@@ -24,11 +25,11 @@ const SingleArticle = (props) => {
 
 
   return (
-    <div>
+    <div className='card'>
       <h1>{article.name}</h1>
       <h2>{article.author}</h2>
       <p>{article.description}</p>
-      <button onClick={() => history.goBack()}>go back</button>
+      <Button onClick={() => history.goBack()}>go back</Button>
     </div>
   );
 };

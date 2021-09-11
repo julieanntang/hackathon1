@@ -7,7 +7,7 @@ const Article = ({id, name, author, description, deleteArticle}) => {
   const history = useHistory();
 
   return (
-    <div>
+    <div className='card'>
       <h1>{name}</h1>
       <h2>{author}</h2>
       <p>{description}</p>

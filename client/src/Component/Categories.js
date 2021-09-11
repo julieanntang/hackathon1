@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Category from './Category'
+import { Button, Card, Grid } from 'semantic-ui-react'
 
 import { useHistory } from 'react-router-dom'
 import CategoryNewForm from './CategoryNewForm'
@@ -13,7 +14,6 @@ const Categories = () => {
   useEffect(()=> {
     getCategories()
   },[])
-
 
   const getCategories = async() => {
     try{
@@ -60,13 +60,15 @@ const Categories = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
       <h1>
         <p>Recreational Vehicles For Sale </p>
-        <button onClick={() => setShowForm(!showForm)}>Add New</button>
+        <Button onClick={() => setShowForm(!showForm)}>Add New</Button>
         {showForm && <CategoryNewForm addCategory={addCategory} />}
         <p>Categories:</p>
-        {renderCategories()}
+        <div className='container'>
+          {renderCategories()}
+        </div>
       </h1>
     </div>
   )

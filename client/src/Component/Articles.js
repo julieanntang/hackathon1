@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Article from "./Article";
+import { Button } from 'semantic-ui-react'
 
 
 const Articles = (props) => {
@@ -40,7 +41,7 @@ const Articles = (props) => {
   return (
     <div>
       <h1>Articles</h1>
-      <button onClick={() => props.history.push("/articles/new")}>Add New Article</button>
+      <Button onClick={() => props.history.push("/articles/new")}>Add New Article</Button>
       <div>
       {renderArticles()}
       </div>

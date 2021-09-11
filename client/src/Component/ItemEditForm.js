@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { Button, Form, Input } from 'semantic-ui-react'
 
 const ItemEditForm = (props) => {
   const [name, setName] = useState(props.name)
@@ -21,17 +22,17 @@ const ItemEditForm = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <p>Enter Name here</p>
-        <input value={name} onChange={(e) => (setName(e.target.value))}/>
+        <Input value={name} onChange={(e) => (setName(e.target.value))}/>
         <p>Enter Description here</p>
-        <input value={description} onChange={(e) => (setDescription(e.target.value))}/>
+        <Input value={description} onChange={(e) => (setDescription(e.target.value))}/>
         <p>Enter Price here</p>
-        <input value={price} onChange={(e) => (setPrice(e.target.value))}/>
+        <Input value={price} onChange={(e) => (setPrice(e.target.value))}/>
         <p>Enter Contact here</p>
-        <input value={contact} onChange={(e) => (setContact(e.target.value))}/> <br/>
-        <button type="submit">Add</button>
-      </form>
+        <Input value={contact} onChange={(e) => (setContact(e.target.value))}/> <br/>
+        <Button type="submit">Add</Button>
+      </Form>
     </div>
   )
 }

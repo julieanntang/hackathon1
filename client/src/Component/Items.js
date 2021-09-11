@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Item from './Item'
 import ItemNewForm from './ItemNewForm'
+import { Button } from 'semantic-ui-react'
 
 
 const Items = (props) => {
@@ -70,9 +71,11 @@ const Items = (props) => {
     <div>
       <h1>Items in {category.name} Category </h1>
       <div onClick={()=> props.history.push('/categories')} >Back</div>
-      <button onClick={()=> setShowForm(!showForm)}>Add New Item</button>
+      <Button onClick={()=> setShowForm(!showForm)}>Add New Item</Button>
       {showForm && <ItemNewForm addItem={addItem} />}
+      <div className='container'>
       {renderItems()}
+      </div>
     </div>
   )
 }

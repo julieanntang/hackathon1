@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button, Form, Input } from 'semantic-ui-react'
 
 const ItemNewForm = ({ addItem }) => {
   const [name, setName] = useState('')
@@ -11,18 +12,18 @@ const ItemNewForm = ({ addItem }) => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='card'>
+      <Form onSubmit={handleSubmit}>
         <p>Enter Name here</p>
-        <input value={name} onChange={(e) => setName(e.target.value) }/>
+        <Input value={name} onChange={(e) => setName(e.target.value) }/>
         <p>Enter Description here</p>
-        <input value={description} onChange={(e) => setDescription(e.target.value)}/>
+        <Input value={description} onChange={(e) => setDescription(e.target.value)}/>
         <p>Enter Price here</p>
-        <input value={price} onChange={(e) => setName(e.target.value) }/>
+        <Input value={price} onChange={(e) => setName(e.target.value) }/>
         <p>Enter Contact here</p>
-        <input value={contact} onChange={(e) => setName(e.target.value) }/> <br/>
-        <button type="submit">Add</button>
-      </form>
+        <Input value={contact} onChange={(e) => setName(e.target.value) }/> <br/>
+        <Button type="submit">Add</Button>
+      </Form>
     </div>
   )
 }
