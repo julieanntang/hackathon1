@@ -7,6 +7,8 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import SingleArticle from './components/SingleArticle';
 import About from './components/About';
+import Categories from './Component/Categories';
+import Items from './Component/Items';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route exact path="/articles/new" component={ArticleForm} />
         <Route exact path="/articles/:id" component={SingleArticle} />
         <Route exact path="/articles/:id/edit" component={EditArticle} />
+        <Route exact  path='/categories' component={Categories}/>
+        <Route exact path='/categories/:category_id/items' component={Items} />
       </Switch>
     </div>
   );
