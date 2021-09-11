@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Category from './Category'
-import CategoryNewForm from '../CategoryNewForm'
+
 import { useHistory } from 'react-router-dom'
+import CategoryNewForm from './CategoryNewForm'
 
 const Categories = () => {
   const [categories, setCategories] = useState([])
