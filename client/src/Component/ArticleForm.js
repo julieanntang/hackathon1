@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Button, Form, Input } from "semantic-ui-react";
 
 const ArticleForm = (props) => {
 
@@ -22,16 +23,16 @@ const ArticleForm = (props) => {
   return (
     <div>
       <h2>Add New Article</h2>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <p>Title:</p>
-        <input value={name} onChange={(e) => setName(e.target.value)} />
+        <Input value={name} onChange={(e) => setName(e.target.value)} />
         <p>Author:</p>
-        <input value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <Input value={author} onChange={(e) => setAuthor(e.target.value)} />
         <p>Body:</p>
-        <input value={description} onChange={(e) => setDescription(e.target.value)} /><br />
-        <button type="submit">Add</button>
-      </form>
-      <button onClick={() => props.history.goBack()}>go back</button>
+        <Input value={description} onChange={(e) => setDescription(e.target.value)} /><br />
+        <Button color="blue" type="submit">Add</Button>
+      </Form>
+      <Button onClick={() => props.history.goBack()}>go back</Button>
     </div>
   );
 };

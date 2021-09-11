@@ -17,7 +17,7 @@ const CategoryEditFrom = (props) => {
         <Input value={name} onChange={(e) => setName(e.target.value) }/>
         <p>Edit Description here</p>
         <Input value={description} onChange={(e) => setDescription(e.target.value)}/><br/>
-        <Button type="submit">Add</Button>
+        <Button color="blue" type="submit">Update</Button>
       </Form>
     </div>
   )

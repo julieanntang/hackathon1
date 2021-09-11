@@ -12,7 +12,7 @@ const Category = ({ name, description, id, updateCategory, deleteCategory }) => 
       <h1>{name}</h1>
       <p>{description}</p>
       <Button onClick={() => history.push(`/categories/${id}/items`) }>See Items</Button>
-      <Button onClick={() => setShowForm(!showForm)}>Edit</Button>
+      <Button color="blue" onClick={() => setShowForm(!showForm)}>Edit</Button>
       {showForm && <CategoryEditFrom updateCategory={updateCategory} id={id} name={name} description={description}/>}
       {showForm && <Icon color='red' name='trash' onClick={() => deleteCategory(id)}/>}
     </div>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { Button, Form, GridColumn, Input } from "semantic-ui-react";
 
 const EditArticle = (props) => {
 
@@ -39,16 +40,16 @@ const EditArticle = (props) => {
   return (
     <div>
       <h2>Update Article</h2>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <p>Title:</p>
-        <input defaultValue={name} onChange={(e) => setName(e.target.value)} />
+        <Input defaultValue={name} onChange={(e) => setName(e.target.value)} />
         <p>Author:</p>
-        <input defaultValue={author} onChange={(e) => setAuthor(e.target.value)} />
+        <Input defaultValue={author} onChange={(e) => setAuthor(e.target.value)} />
         <p>Body:</p>
-        <input defaultValue={description} onChange={(e) => setDescription(e.target.value)} /><br />
-        <button type="submit">Update</button>
-      </form>
-      <button onClick={() => props.history.goBack()}>go back</button>
+        <Input defaultValue={description} onChange={(e) => setDescription(e.target.value)} /><br />
+        <Button color="blue" type="submit">Update</Button>
+      </Form>
+      <Button onClick={() => props.history.goBack()}>go back</Button>
     </div>
   );
 };

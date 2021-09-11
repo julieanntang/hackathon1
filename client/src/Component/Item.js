@@ -11,7 +11,7 @@ const Item = ({ id, category_id, name, description, price, contact, updateItem, 
       <p>${price}</p>
       <p>Phone: {contact}</p>
       <Button onClick={()=> deleteItem(id)}>Delete</Button>
-      <Button onClick={() => setShowForm(!showForm)}>Edit</Button>
+      <Button color="blue" onClick={() => setShowForm(!showForm)}>Edit</Button>
       {showForm && <ItemEditForm name={name} category_id={category_id} updateItem={updateItem} id={id} description={description} price={price} contact={contact} />}
     </div>
   )

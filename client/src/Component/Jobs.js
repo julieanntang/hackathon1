@@ -29,7 +29,7 @@ const Jobs = () => {
     const renderJobs = () => {
         return jobs.map((j) => {
             return (
-                <Segment>
+                <div className='card'>
                 <Header>{j.name}</Header>
                 <br/>
                 <Header>{j.description}</Header>
@@ -43,7 +43,7 @@ const Jobs = () => {
                  {/* ? <Popup content='Delete' trigger={<Icon name='trash' color="red" background="red" onClick={() => deleteJob(j.id)} />} /> */}
                 </div>
                 <br/>
-              </Segment>
+              </div>
               
 
             );

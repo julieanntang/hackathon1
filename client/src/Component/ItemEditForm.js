@@ -31,7 +31,7 @@ const ItemEditForm = (props) => {
         <Input value={price} onChange={(e) => (setPrice(e.target.value))}/>
         <p>Enter Contact here</p>
         <Input value={contact} onChange={(e) => (setContact(e.target.value))}/> <br/>
-        <Button type="submit">Add</Button>
+        <Button color="blue" type="submit">Add</Button>
       </Form>
     </div>
   )

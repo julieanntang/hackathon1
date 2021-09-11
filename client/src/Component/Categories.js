@@ -60,13 +60,13 @@ const Categories = () => {
   }
 
   return (
-    <div className='container'>
+    <div>
       <h1>
         <p>Recreational Vehicles For Sale </p>
         <Button onClick={() => setShowForm(!showForm)}>Add New</Button>
         {showForm && <CategoryNewForm addCategory={addCategory} />}
         <p>Categories:</p>
-        <div className='container'>
+        <div>
           {renderCategories()}
         </div>
       </h1>

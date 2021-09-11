@@ -22,7 +22,7 @@ const ItemNewForm = ({ addItem }) => {
         <Input value={price} onChange={(e) => setName(e.target.value) }/>
         <p>Enter Contact here</p>
         <Input value={contact} onChange={(e) => setName(e.target.value) }/> <br/>
-        <Button type="submit">Add</Button>
+        <Button color="blue" type="submit">Add</Button>
       </Form>
     </div>
   )
