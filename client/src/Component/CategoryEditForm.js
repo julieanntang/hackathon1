@@ -6,7 +6,7 @@ const CategoryEditFrom = (props) => {
   const [id, setId] = useState(props.id)
 
   const handleSubmit = () => {
-    props.updateCategory({ name, description, id })
+    props.updateCategory({name, description, id})
   }
 
   return (

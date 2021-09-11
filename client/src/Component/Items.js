@@ -8,6 +8,7 @@ const Items = (props) => {
   const category_id = props.match.params.category_id
   const [items, setItems] = useState([])
   const [category, setCategory] = useState([])
+  const [showForm, setShowForm] = useState(false)
 
   useEffect(() => {
     getItems()
@@ -41,12 +42,18 @@ const Items = (props) => {
     }
   }
 
-  const updateItem = async (item) => {
-    try{
-      let res = await axios.put(`/api/categories/${category_id}/items/${item.id}`, item)
+  const updateItem = (item) => {
+    console.log(item)
       const newItems = items.map((i) => i.id === item.id ? item : i)
       setItems(newItems)
-    }catch(err) {
+  }
+
+  const deleteItem = async (id) => {
+    try {
+      let res = await axios.delete(`/api/categories/${category_id}/items/${id}`)
+      let filteredItems = items.filter((i) => i.id != id)
+      setItems(filteredItems)
+    } catch(err){
       console.log(err)
     }
   }
@@ -54,16 +61,17 @@ const Items = (props) => {
   const renderItems = () => {
     return items.map((i) => (
       <div key={i.id}>
-        <Item {...i} updateItem={updateItem} />
+        <Item {...i} deleteItem={deleteItem} updateItem={updateItem}/>
       </div>
     ))
   }
 
-
   return (
     <div>
       <h1>Items in {category.name} Category </h1>
-      <ItemNewForm addItem={addItem} />
+      <div onClick={()=> props.history.push('/categories')} >Back</div>
+      <button onClick={()=> setShowForm(!showForm)}>Add New Item</button>
+      {showForm && <ItemNewForm addItem={addItem} />}
       {renderItems()}
     </div>
   )
