@@ -9,9 +9,9 @@ const About = () => {
     <div>
       <h1>HELLO!</h1>
       <p>We are just a bunch of bored hooligans who decided to put this site together.</p>
-      <img src={alan} alt="fireSpot" height="300px" width="150px" />
-      <img src={julie} alt="fireSpot" height="300px" width="150px" />
-      <img src={lee} alt="fireSpot" height="300px" width="150px" />
+      <img src={alan} alt="fireSpot" height="300px" width="170px" />
+      <img src={julie} alt="fireSpot" height="300px" width="170px" />
+      <img src={lee} alt="fireSpot" height="300px" width="170px" />
     </div>
   );
 };
