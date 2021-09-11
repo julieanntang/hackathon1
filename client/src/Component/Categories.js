@@ -36,6 +36,8 @@ const Categories = () => {
   const updateCategory = async(category) => {
     try {
       let res = await axios.put(`/api/categories/${category.id}`, category)
+      let newCategories = categories.map((c)=> c.id == category.id ? category : c)
+      setCategories(newCategories)
     }catch(err){
       console.log(err)
     }
