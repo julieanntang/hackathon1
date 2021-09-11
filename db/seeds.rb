@@ -133,19 +133,12 @@ blackparaglider = submarine.items.create(name:"black submarine", description:"th
 whiteparaglider = submarine.items.create(name:"white submarine", description:"this is a blue submarine", price: 7, contact:(Faker::PhoneNumber.phone_number ))
 goldparaglider = submarine.items.create(name:"gold submarine", description:"this is a blue submarine", price: 7, contact:(Faker::PhoneNumber.phone_number ))
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 670623bf0f0868019ae232cc110539e81a29ad6a
 10.times do
   Job.create(name:(Faker::Job.title), description:(Faker::ChuckNorris.fact), salary:(Faker::Number.number(digits: 5)))
 end
 
-<<<<<<< HEAD
 10.times do
-=======
-10.times do 
->>>>>>> 670623bf0f0868019ae232cc110539e81a29ad6a
   Article.create(name:(Faker::Quote.famous_last_words), author:(Faker::Name.name), description:(Faker::ChuckNorris.fact))
 end
