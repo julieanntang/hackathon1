@@ -14,7 +14,6 @@ const Articles = (props) => {
     try {
       let res = await axios.get("/api/articles");
       setArticles(res.data);
-      console.log(res.data);
     } catch (error) {
       alert("error retrieving articles")
       console.log(error);
@@ -35,11 +34,6 @@ const Articles = (props) => {
       alert(error);
       console.log("error");
     };
-  };
-
-  const showArticle = (id) => {
-    let specificArticle = articles.filter((art) => art.id === id);
-    return specificArticle;
   };
 
 

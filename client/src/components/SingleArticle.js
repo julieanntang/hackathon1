@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
-import Article from "./Article";
 import axios from "axios";
 
 const SingleArticle = (props) => {
@@ -16,7 +15,6 @@ const SingleArticle = (props) => {
   const getArticle = async () => {
     try {
       let res = await axios.get(`/api/articles/${props.match.params.id}`);
-      console.log(res.data);
       setArticle(res.data);
     } catch (error) {
       alert("error retrieving article")
