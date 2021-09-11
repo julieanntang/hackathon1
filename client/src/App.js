@@ -1,12 +1,12 @@
 import './App.css';
 import { Switch, Route } from "react-router-dom";
-import Articles from './components/Articles';
-import ArticleForm from './components/ArticleForm';
-import EditArticle from './components/EditArticle';
-import NavBar from './components/NavBar';
-import Home from './components/Home';
-import SingleArticle from './components/SingleArticle';
-import About from './components/About';
+import Articles from './Component/Articles';
+import ArticleForm from './Component/ArticleForm';
+import EditArticle from './Component/EditArticle';
+import NavBar from './Component/NavBar';
+import Home from './Component/Home';
+import SingleArticle from './Component/SingleArticle';
+import About from './Component/About';
 import Categories from './Component/Categories';
 import Items from './Component/Items';
 
