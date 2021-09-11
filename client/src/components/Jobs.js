@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Header, Icon, Segment } from "semantic-ui-react";
+import { Header, Segment, Button } from "semantic-ui-react";
 
 const Jobs = () => {
     const [jobs, setJobs] = useState([]);
@@ -36,8 +36,11 @@ const Jobs = () => {
                 <br/>
                 <Header>Salary ${j.salary}</Header>
                 <div>
-                  <Link to={{ pathname: `jobs/${j.id}/edit`, job: j }}>edit</Link>
-                  <Icon onClick={() => deleteJob(j.id)} name="trash"></Icon>
+                <Link to={{ pathname: `jobs/${j.id}/edit`, job: j }}><Button color="blue">edit</Button>
+                </Link>
+                <Button color="red" onClick={() => deleteJob(j.id)}>Delete</Button>
+                  {/* <Icon onClick={() => deleteJob(j.id)} name="trash">Delete</Icon> */}
+                 {/* ? <Popup content='Delete' trigger={<Icon name='trash' color="red" background="red" onClick={() => deleteJob(j.id)} />} /> */}
                 </div>
                 <br/>
               </Segment>
