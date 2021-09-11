@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Category.destroy_all
+Item.destroy_all
 Job.destroy_all
 Article.destroy_all
 
