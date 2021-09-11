@@ -2,7 +2,7 @@ class Api::JobsController < ApplicationController
 
   def index
     @jobs = Job.all
-    render json: jobs
+    render json: @jobs
   end
   
   def show

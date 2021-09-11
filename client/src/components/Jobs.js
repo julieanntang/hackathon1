@@ -31,10 +31,17 @@ const Jobs = () => {
             return (
                 <Segment>
                 <Header>{j.name}</Header>
+                <br/>
+
+                <Header>{j.description}</Header>
+                <br/>
+
+                <Header>Salary ${j.salary}</Header>
                 <div>
                   <Link to={{ pathname: `jobs/${j.id}/edit`, job: j }}>edit</Link>
                   <Icon onClick={() => deleteJob(j.id)} name="trash"></Icon>
                 </div>
+                <br/>
               </Segment>
 
             );
