@@ -17,8 +17,8 @@ require "faker"
     Article.create(name:(Faker::Quote.famous_last_words), author:(Faker::Name.name), description:(Faker::ChuckNorris.fact))
 end
 
-job = Job.create(name:"Auto mechanic", description:"Larry H. Miller Jeep of South Salt Lake is looking for an exceptional mechanic with a can do attitude and a vast knowledge on how to fix everything." "Great benefits: Holiday Pay, Bonus Pay, Insurance, Sick Days, Vacation accrual." "Job Qualifications: Specialization with Jeeps preffered. 5-8 years experience required. High school diploma or the equivalent recommended but not required.", salary: 51000.00-62000.00)
-# job = Job.create(name:, description:, salary: 5100.00)
+job = Job.create(name:"Auto mechanic", description:"Larry H. Miller Jeep of South Salt Lake is looking for an exceptional mechanic with a can do attitude and a vast knowledge on how to fix everything. Great benefits: Holiday Pay, Bonus Pay, Insurance, Sick Days, Vacation Accrual. Job Qualifications: Specialization with Jeeps preffered. 5-8 years experience required. High school diploma or the equivalent recommended but not required.", salary: 51000.00.00)
+job1 = Job.create(name:"Automotive Technician", description:, salary: 63000.00)
 # job = Job.create(name:, description:, salary: 5100.00)
 # job = Job.create(name:, description:, salary: 5100.00)
 # job = Job.create(name:, description:, salary: 5100.00)

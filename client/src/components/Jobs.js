@@ -19,7 +19,7 @@ const Jobs = () => {
     };
     const deleteJob = async (id) => {
         try {
-            let res = await axios.deleteJob(`/api/jobs/${id}`);
+            let res = await axios.delete(`/api/jobs/${id}`);
             setJobs(jobs.filter((j) => j.id !== id));
         } catch (err) {
             alert(err);
@@ -32,10 +32,8 @@ const Jobs = () => {
                 <Segment>
                 <Header>{j.name}</Header>
                 <br/>
-
                 <Header>{j.description}</Header>
                 <br/>
-
                 <Header>Salary ${j.salary}</Header>
                 <div>
                   <Link to={{ pathname: `jobs/${j.id}/edit`, job: j }}>edit</Link>
