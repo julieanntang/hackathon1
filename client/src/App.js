@@ -9,6 +9,9 @@ import SingleArticle from './Component/SingleArticle';
 import About from './Component/About';
 import Categories from './Component/Categories';
 import Items from './Component/Items';
+import JobNew from "./Component/JobNew"
+import JobEdit from "./Component/JobEdit"
+import Jobs from "./Component/Jobs";
 
 function App() {
   return (
@@ -23,9 +26,12 @@ function App() {
         <Route exact path="/articles/:id/edit" component={EditArticle} />
         <Route exact  path='/categories' component={Categories}/>
         <Route exact path='/categories/:category_id/items' component={Items} />
+        <Route exact path="/Jobs" component={Jobs} />
+        <Route exact path="/Jobs/new" component={JobNew} />
+        <Route exact path="/Jobs/:id/edit" component={JobEdit} />
       </Switch>
     </div>
-  );
-};
+  )
+}
 
 export default App;
