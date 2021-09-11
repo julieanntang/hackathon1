@@ -1,16 +1,18 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import { Button, Form } from "semantic-ui-react";
 
 
 const JobNew = (props) => {
   
+  const history = useHistory();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [salary, setSalary] = useState("");
 
   const handleSubmit = async () => {
-    await axios.put(`/api/jobs/`, { name, description, salary });
+    await axios.post("/api/jobs", { name, description, salary });
     props.history.push("/jobs");
   };
   return (
@@ -40,6 +42,7 @@ const JobNew = (props) => {
           <Button type="submit">add</Button>
         </Form.Field>
       </Form>
+      <button onClick={() => history.goBack()}>go back</button>
     </div>
   );
 };

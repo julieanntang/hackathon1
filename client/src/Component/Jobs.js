@@ -36,14 +36,15 @@ const Jobs = () => {
                 <br/>
                 <Header>Salary ${j.salary}</Header>
                 <div>
-                <Link to={{ pathname: `jobs/${j.id}/edit`, job: j }}><Button color="blue">edit</Button>
+                <Link to={{ pathname: `jobs/${j.id}/edit`, job: j }}><Button color="blue">Edit</Button>
                 </Link>
-                <Button color="red" onClick={() => deleteJob(j.id)}>Delete</Button>
+                <Button onClick={() => deleteJob(j.id)}>Delete</Button>
                   {/* <Icon onClick={() => deleteJob(j.id)} name="trash">Delete</Icon> */}
                  {/* ? <Popup content='Delete' trigger={<Icon name='trash' color="red" background="red" onClick={() => deleteJob(j.id)} />} /> */}
                 </div>
                 <br/>
               </Segment>
+              
 
             );
         });
@@ -51,7 +52,7 @@ const Jobs = () => {
     return (
         <div>
             <h1>Job Listings</h1>
-            <Link to="jobs/new">New Job Listing</Link>
+            <Link to="jobs/new">Add New Job Listing</Link>
             {renderJobs()}
         </div>
     );
