@@ -136,7 +136,7 @@ goldparaglider = submarine.items.create(name:"gold submarine", description:"this
 
 
 10.times do
-  Job.create(name:(Faker::Job.title), description:(Faker::ChuckNorris.fact))
+  Job.create(name:(Faker::Job.title), description:(Faker::ChuckNorris.fact), salary:(Faker::Number.number(digits: 5)))
 end
 
 10.times do
